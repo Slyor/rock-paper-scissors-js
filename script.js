@@ -8,6 +8,18 @@ function getRandomInt(max){
   return Math.floor(Math.random() * max)
 }
 
+
+//These 3 functions define the value of userChoice, depending on which one he clicks in the HTML
+function rock(){
+  userChoice = "rock";
+}
+function paper(){
+  userChoice = "paper"
+}
+function scissors(){
+  userChoice = "scissors"
+}
+
 /*
 Gets a random number between 0 and 3. Not inclusive, because 3 is not included. Numbers can be 0,1 or 2.
 Defines an array "rps" with 3 values.
@@ -17,17 +29,6 @@ function computerChoose(){
   computerChoice = getRandomInt(3);
   rps = ["rock", "paper", "scissors"];
   computerChoice = rps[computerChoice];
-}
-
-//These 3 functions define the value of userChoice, depending on which one he clicks in the HTML
-function userRock(){
-  userChoice = "rock"
-}
-function userPaper(){
-  userChoice = "paper"
-}
-function userScissors(){
-  userChoice = "scissors"
 }
 
 
@@ -43,6 +44,12 @@ function showResult(){
     result = "You lose!"
   } 
   alert(`${result} You chose ${userChoice}, computer chose ${computerChoice}.`)
+}
+
+function userClick(action1,action2,action3){
+  action1()
+  action2()
+  action3()
 }
 
 /*
