@@ -11,13 +11,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button type="button" class="btn btn-secondary" id="userChoose" onclick="userRock()">rock</button>
-  <button type="button" class="btn btn-outline-dark" onclick="userPaper()">Paper</button>
-  <button type="button" class="btn btn-info" onclick="userScissors()">Scissors</button><br>
-
-
-  <button type="button" class="btn btn-primary" id="computerChoose" onclick="computerChoose()">computer choose</button>
-  <button type="button" class="btn btn-success" onclick="showResult()">Result</button>
+  
+  <button type="button" class="btn btn-secondary" id="userChoose" onclick="userClick(rock, computerChoose, showResult)">rock</button>
+  <button type="button" class="btn btn-outline-dark" onclick="userClick(paper, computerChoose,showResult)">Paper</button>
+  <button type="button" class="btn btn-info" onclick="userClick(scissors,computerChoose,showResult)">Scissors</button><br>
 
 </body>
 </html>
