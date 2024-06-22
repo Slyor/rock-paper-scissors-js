@@ -1,38 +1,62 @@
-//get a random integer, from 0 to max value
+//define initial values
+let userChoice
+let computerChoice
+let result
+
+//returns a random number between 0 and max value as a float, then rounds it to the nearest integer
 function getRandomInt(max){
   return Math.floor(Math.random() * max)
 }
 
-//asks user for a number between 0-2
-let userChoice = prompt("Enter rock, paper or scissors")
-let computerChoice = getRandomInt(3)
-let result;
-
-rps = ["rock", "paper", "scissors"]
-computerChoice = rps[computerChoice];
-
-if (userChoice == computerChoice){
-  result = "Draw!"
-} else if (userChoice == "rock" && computerChoice == "scissors"
-  || userChoice == "paper" && computerChoice == "rock"
-  || userChoice == "scissors" && computerChoice == "paper") {
-  result = "User wins!"
-} else{
-  result = "Computer wins!"
+/*
+Gets a random number between 0 and 3. Not inclusive, because 3 is not included. Numbers can be 0,1 or 2.
+Defines an array "rps" with 3 values.
+The computer choice is then converted from the random integer to a key value in the array "rps"
+*/
+function computerChoose(){
+  computerChoice = getRandomInt(3);
+  rps = ["rock", "paper", "scissors"];
+  computerChoice = rps[computerChoice];
 }
 
+//These 3 functions define the value of userChoice, depending on which one he clicks in the HTML
+function userRock(){
+  userChoice = "rock"
+}
+function userPaper(){
+  userChoice = "paper"
+}
+function userScissors(){
+  userChoice = "scissors"
+}
+
+
+//show the result of the game
 function showResult(){
-  return `${result} You chose ${userChoice}, computer chose ${computerChoice}.`
+  if (userChoice == computerChoice){
+    result = "Draw!"
+  } else if (userChoice == "rock" && computerChoice == "scissors"
+    || userChoice == "paper" && computerChoice == "rock"
+    || userChoice == "scissors" && computerChoice == "paper") {
+    result = "You win!"
+  } else{
+    result = "You lose!"
+  } 
+  alert(`${result} You chose ${userChoice}, computer chose ${computerChoice}.`)
 }
 
-alert(showResult())
+/*
+
+TO DO:
+- after user chooses rock, paper or scissors, it should automatically choose for the computer. The user shouldnt have to click a button for the computer.
+- Also make the result execute automatically after one of the three buttons are clicked, and give instructions with explanations using text in the HTML.
+- For this to be achieved, I must learn callback functions.
+
+*/
 
 
 
-
-
-
-// TESTING
+// IGNORE TESTING IGNORE
 // if (userChoice == "rock" && computerChoice == "paper"){
 //   result = "You win!"
 // } else if (userChoice == "paper" && computerChoice == "rock"){
