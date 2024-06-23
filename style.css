@@ -1,0 +1,39 @@
+.btn{
+  font-size: 25px;
+  margin: 0px 20px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+}
+.buttons{
+  margin-bottom: 20px;
+}
+p{
+  font-style: italic;
+}
+
+.header, .footer{
+  height: fit-content;
+}
+.buttons{
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make text unselesctable lol */
+p, h1{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
