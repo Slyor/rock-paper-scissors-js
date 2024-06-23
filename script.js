@@ -43,7 +43,7 @@ function showResult(){
   } else{
     result = "You lose!"
   } 
-  alert(`${result} You chose ${userChoice}, computer chose ${computerChoice}.`)
+  alert(`${result.toUpperCase()} \n\nYou chose ${userChoice}, computer chose ${computerChoice}!`)
 }
 
 function userClick(action1,action2,action3){
@@ -55,13 +55,20 @@ function userClick(action1,action2,action3){
 /*
 
 TO DO:
+- Add dark mode.
+
+/*
+
+
+
+
+
+DONE:
 - after user chooses rock, paper or scissors, it should automatically choose for the computer. The user shouldnt have to click a button for the computer.
 - Also make the result execute automatically after one of the three buttons are clicked, and give instructions with explanations using text in the HTML.
 - For this to be achieved, I must learn callback functions.
 
 */
-
-
 
 // IGNORE TESTING IGNORE
 // if (userChoice == "rock" && computerChoice == "paper"){
