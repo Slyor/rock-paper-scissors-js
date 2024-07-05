@@ -72,7 +72,7 @@ function chooseUserRPS(choice){
 }
 
 
-rockButton.addEventListener("click", () => {
+rockButton.addEventListener("click", function(){
   chooseUserRPS("rock");
   displayScore();
 })
