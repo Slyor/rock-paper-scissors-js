@@ -19,8 +19,31 @@ function getComputerChoice(){
 }
 
 //checks in which conditions the user would win, in others the pc
+
+function playRound(){
+  userScore = 0;
+  computerScore = 0;
+}
+
+let winner = "";
+function chooseWinner(){
+  if (userScore > computerScore){
+    winner = "User"
+  } else{
+    winner = "Computer"
+  }
+}
+
 function calculateScore(){
-  if (userChoice == computerChoice){
+  if (userScore == 5 || computerScore == 5){
+    chooseWinner();
+    alert(`${winner} wins!`)
+    if(confirm("Play again?")){
+      playRound()
+    } else{
+      return};
+  }
+  else if (userChoice == computerChoice){
     return 
   } else if (userChoice == "rock" && computerChoice == "scissors"
     || userChoice == "paper" && computerChoice == "rock"
@@ -63,6 +86,14 @@ scissorsButton.addEventListener("click", function(){
 })
 
 
+
+// for (userScore = 0, computerScore = 0; userScore < 2 || computerScore < 2; calculateScore()){
+//   if (userScore == 2 || computerScore == 2){
+//     alert("over")
+//     break
+//   }
+//   continue
+// }
 
 // let gameOver = false;
 
